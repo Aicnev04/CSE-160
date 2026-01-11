@@ -20,6 +20,8 @@ function main(){
     //Draw a black canvas
     ctx.fillStyle = 'rgba(0,0,0,1.0)';
     ctx.fillRect(0,0,400,400);
+
+    drawVector(new Vector3([2.25,2.25,0]), "red");
 }
 
 function drawVector(v, color){
