@@ -1,4 +1,11 @@
 //asg0.js
+/*
+Richard Valencia
+rivalenc@ucsc.edu
+
+Notes to Grader:
+N/A
+*/
 function main(){
     //Retrieve the <canvas> element
     var canvas = document.getElementById('example');
