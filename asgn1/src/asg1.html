@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Assignment 1: Painting</title>
+  </head>
+
+  <style>
+  body { background-color: #2c2c2c; color: #ffffff; }
+  </style>
+
+  <body onload="main()">
+    <p>
+      Richard Valencia
+      <br>
+      rivalenc@ucsc.edu
+      <br><br>
+      Notes to Grader: 
+      <br>
+      - I've readjusted the way the color sliders worked from the Youtube playlist code such that it 
+      accurately reflects the sliders. For example, if you had set the red slider to about 10, the
+      color would appear teal. This was due to the fact that the values were initally set to white
+      which was [1.0, 1.0, 1.0, 1.0], such that if the red slider was used, it would set the color
+      to [0.1, 1.0, 1.0, 1.0] which would result teal. To avoid this problem and get the expected
+      color, I ensured that if a slider was used, the other colors would be set to 0.0 unless
+      they were also adjusted.
+      <br>
+      - The triangles in the Youtube playlist were coded as right triangles, but I modified them to
+      be equilateral triangles that are in the sample in the assigment. Plus I think they look better.
+      <br>
+      - I added a color picker that also adjusts the sliders to match the selected color.
+      <br>
+      - I added a way to enable and disable a vertical line of symmetry by using a HTML checkbox. This
+      allows the user to create unqiue symmetric drawings. I simply had to create a copy of the drawn
+      point with the x-coordinate negated. 
+      <br>
+      - My proudest addition is the zoom feature. By using the mouse wheel, the user can zoom in and out
+      of the center of the canvas. By adding an event listener for the vertical mouse scroll and creating a function to 
+      account for zoom speed and level, I was able to apply the zoom level to x and y coordinates of all 
+      shapes drawn on the canvas. This includes points, triangles, circles. Though I did notice a the points
+      scaled differently than the triangles and circles, likely due to the way points are rendered with drawArrays. If I 
+      hade more time, I would like to have a a zoom in with focal preseveration, such that the origin is at the cursor
+      as opposed to the center of the canvas.
+      <br>
+      - The image I made has the initals "RV" in the clouds.
+    </p>
+
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+    <p id="numdot"> XXX</p>
+    <button type="button" id="showImage">Show Image</button>
+    <button type="button" id="clearButton">Clear Canvas</button> 
+    <input type="checkbox" id="symmetryLine"> Symmetry Line </input>
+
+    <p>Drawing Mode:
+    <button type="button" id="pointButton">Point</button>
+    <button type="button" id="triButton">Triangle</button>
+    <button type="button" id="circleButton">Circle</button>
+
+
+    <p> Solid Colors:
+    <button type="button" id="red">Red</button>
+    <button type="button" id="green">Green</button>
+    <button type="button" id="blue">Blue</button>  
+  
+    <br>
+
+    <p>
+    Color Picker:<input type="color" id="colorPick" value="#ffffff">
+
+    Red <input type="range" min="0" max="100" value="0" class="slider" id="redSlide">
+    Green <input type="range" min="0" max="100" value="0" class="slider" id="greenSlide">
+    Blue <input type="range" min="0" max="100" value="0" class="slider" id="blueSlide">
+    </p>
+
+    <p>
+    Size <input type="range" min="5" max="40" value="5" class="slider" id="sizeSlide">
+    Segment Count <input type="range" min="10" max="50" value="5" class="slider" id="segmentSlide">
+    </p>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/Point.js"></script>
+    <script src="../lib/Triangle.js"></script>
+    <script src="../lib/Circle.js"></script>
+    <script src="../lib/Picture.js"></script>
+    <script src="asg1.js"></script>
+  </body>
+</html>
