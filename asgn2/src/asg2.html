@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Assignment 1: Painting</title>
+  </head>
+
+  <style>
+  body { background-color: #777777; color: #ffffff; }
+  </style>
+
+  <body onload="main()">
+    <p>
+      Richard Valencia
+      <br>
+      rivalenc@ucsc.edu
+      <br><br>
+  
+    <canvas id="webgl" width="800" height="600">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+   
+    <p id="numdot"> XXX</p>
+
+
+    <p>
+      Yellow Slider <input type="range" min="-45" max="45" value="0" class="slider" id="yellowSlide">
+    </p>
+
+    <p>
+      Magenta Slider <input type="range" min="-45" max="45" value="0" class="slider" id="magentaSlide">
+    </p>
+
+    <button type="button" id="animationYellowOnButton">ON</button>
+    <button type="button" id="animationYellowOffButton">OFF</button>
+
+    <p>
+      Camera Angle <input type="range" min="-180" max="180" value="0" class="slider" id="angleSlide">
+    </p>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix-cse160.js"></script>
+    <script src="../lib/Point.js"></script>
+    <script src="../lib/Triangle.js"></script>
+    <script src="../lib/Circle.js"></script>
+    <script src="../lib/Cube.js"></script>
+    <script src="asg2.js"></script>
+  </body>
+</html>
