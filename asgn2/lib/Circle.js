@@ -3,7 +3,7 @@ class Circle{
         this.type="circle";
         //this.position = [0.0,0.0,0.0];
         this.color = [1.0,1.0,1.0,1.0];
-        this.segments = 10;
+        this.segments = 100;
         this.matrix = new Matrix4();
     }
 

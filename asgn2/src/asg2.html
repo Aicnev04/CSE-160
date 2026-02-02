@@ -2,43 +2,139 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Assignment 1: Painting</title>
+    <title>Assignment 2: Blocky Animal</title>
+    <link rel="stylesheet" href="style.css">
   </head>
-
-  <style>
-  body { background-color: #777777; color: #ffffff; }
-  </style>
+  
 
   <body onload="main()">
-    <p>
-      Richard Valencia
-      <br>
-      rivalenc@ucsc.edu
-      <br><br>
-  
+
+
+    <div id="asgn">
     <canvas id="webgl" width="800" height="600">
-    Please use a browser that supports "canvas"
+        Please use a browser that supports "canvas"
     </canvas>
 
-   
+    <div id="ui">
+          
+    Richard Valencia
+    rivalenc@ucsc.edu
+    <br>
+    Notes to Grader: See <a href="https://github.com/Aicnev04/CSE-160/blob/main/asgn2/README.md">README.md</a>
+
+    <p>
+    Color Picker: <input type="color" id="colorPick" value="#ffffff">
+    </p>
+
+    
     <p id="numdot"> XXX</p>
 
-
+    <p class="underline-text">Animations</p>
+ 
     <p>
-      Yellow Slider <input type="range" min="-45" max="45" value="0" class="slider" id="yellowSlide">
+      Walk Animation
+    <button type="button" id="walkAnimationOnButton">ON</button>
+    <button type="button" id="walkAnimationOffButton">OFF</button>
+    <p>
+      Attack Mode
+    <button type="button" id="attackAnimationOnButton">ON</button>
+    <button type="button" id="attackAnimationOffButton">OFF</button>
     </p>
 
     <p>
-      Magenta Slider <input type="range" min="-45" max="45" value="0" class="slider" id="magentaSlide">
+    Walk Speed: <input type="number" id="walkSpeedInput" class="myInput" value="2">
+    <br>
+    Strut Amount: <input type="number" id="strutInput" class="myInput" value="20">
     </p>
 
-    <button type="button" id="animationYellowOnButton">ON</button>
-    <button type="button" id="animationYellowOffButton">OFF</button>
+
+
+    <p class="underline-text">Camera Settings</p>
+    <p>
+      Camera Angle (y) <input type="range" min="-180" max="180" value="0" class="mySlider" id="angleYSlide">
+    </p>
 
     <p>
-      Camera Angle <input type="range" min="-180" max="180" value="0" class="slider" id="angleSlide">
+      Camera Angle (x) <input type="range" min="-180" max="180" value="0" class="mySlider" id="angleXSlide">
     </p>
 
+    <p>
+      Camera Angle (z) <input type="range" min="-180" max="180" value="0" class="mySlider" id="angleZSlide">
+    </p>
+
+
+    <p class="underline-text">Body Part Angle Sliders</p>
+    <p class="center-text">Head</p>
+    <p>
+      X <input type="range" min="-180" max="180" value="0" class="mySlider" id="headXSlide">
+      Y <input type="range" min="-180" max="180" value="0" class="mySlider" id="headYSlide">
+      Z <input type="range" min="-180" max="180" value="0" class="mySlider" id="headZSlide">
+    </p>
+
+    <p class="center-text">Torso</p>
+    <p>
+       X <input type="range" min="-180" max="180" value="0" class="mySlider" id="bodyXSlide">
+       Y <input type="range" min="-180" max="180" value="0" class="mySlider" id="bodyYSlide">
+       Z <input type="range" min="-180" max="180" value="0" class="mySlider" id="bodyZSlide">
+    </p>
+
+    <p class="center-text">Left Arm</p>
+    <p>
+       X <input type="range" min="-180" max="180" value="0" class="mySlider" id="leftArmXSlide">
+       Y <input type="range" min="-180" max="180" value="0" class="mySlider" id="leftArmYSlide">
+       Z <input type="range" min="-180" max="180" value="0" class="mySlider" id="leftArmZSlide">
+    </p>
+
+    <p class="center-text">Left Elbow</p>
+    <p>
+       X <input type="range" min="-180" max="180" value="0" class="mySlider" id="leftElbowXSlide">
+       Y <input type="range" min="-180" max="180" value="0" class="mySlider" id="leftElbowYSlide">
+       Z <input type="range" min="-180" max="180" value="0" class="mySlider" id="leftElbowZSlide">
+    </p>
+
+    <p class="center-text">Left Hand</p>
+    <p>
+       X <input type="range" min="-180" max="180" value="0" class="mySlider" id="leftHandXSlide">
+       Y <input type="range" min="-180" max="180" value="0" class="mySlider" id="leftHandYSlide">
+       Z <input type="range" min="-180" max="180" value="0" class="mySlider" id="leftHandZSlide">
+    </p>
+
+    <p class="center-text">Right Arm</p>
+    <p>
+       X <input type="range" min="-180" max="180" value="0" class="mySlider" id="rightArmXSlide">
+       Y <input type="range" min="-180" max="180" value="0" class="mySlider" id="rightArmYSlide">
+       Z <input type="range" min="-180" max="180" value="0" class="mySlider" id="rightArmZSlide">
+    </p>
+
+    <p class="center-text">Right Elbow</p>
+    <p>
+       X <input type="range" min="-180" max="180" value="0" class="mySlider" id="rightElbowXSlide">
+       Y <input type="range" min="-180" max="180" value="0" class="mySlider" id="rightElbowYSlide">
+       Z <input type="range" min="-180" max="180" value="0" class="mySlider" id="rightElbowZSlide">
+    </p>
+
+    <p class="center-text">Right Hand</p>
+    <p>
+       X <input type="range" min="-180" max="180" value="0" class="mySlider" id="rightHandXSlide">
+       Y <input type="range" min="-180" max="180" value="0" class="mySlider" id="rightHandYSlide">
+       Z <input type="range" min="-180" max="180" value="0" class="mySlider" id="rightHandZSlide">
+    </p>
+
+    <p class="center-text">Left Leg</p>
+    <p>
+      X <input type="range" min="-45" max="45" value="0" class="mySlider" id="leftLegXSlide">
+      Y <input type="range" min="-45" max="45" value="0" class="mySlider" id="leftLegYSlide">
+      Z <input type="range" min="-45" max="45" value="0" class="mySlider" id="leftLegZSlide">
+    </p>
+
+    <p class="center-text">Right Leg</p>
+    <p>
+      X <input type="range" min="-45" max="45" value="0" class="mySlider" id="rightLegXSlide">
+      Y <input type="range" min="-45" max="45" value="0" class="mySlider" id="rightLegYSlide">
+      Z <input type="range" min="-45" max="45" value="0" class="mySlider" id="rightLegZSlide">
+    </p>
+    </div>
+  </div>
     <script src="../lib/webgl-utils.js"></script>
     <script src="../lib/webgl-debug.js"></script>
     <script src="../lib/cuon-utils.js"></script>

@@ -29,8 +29,8 @@ class Cube{
             0,0,1, 0,0,0, 1,0,0,
             //Back
             0,0,1, 1,1,1, 1,0,1,
-            0,0,1, 0,1,1, 1,1,1
-        ]
+            0,0,1, 0,1,1, 1,1,1,
+        ];
 
         var vertexBuffer = gl.createBuffer();
         if (!vertexBuffer) {
@@ -60,4 +60,3 @@ class Cube{
 
     }
 }
- 
