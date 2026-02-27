@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Assignment 3: Virtual World</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+
+  <body onload="main()">
+    <br><br><br>
+    <div id="asgn">
+      
+  
+    <canvas id="webgl" width="1280" height="720">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+   <div id = "ui">
+      Richard Valencia
+      <br>
+      rivalenc@ucsc.edu
+      <br>
+      Notes to Grader at <a href ="https://aicnev04.github.io/CSE-160/asgn3/">README.md</a>
+      <br>
+    <p id="numdot"> XXX</p>
+    
+
+    <p>
+      <button type ="button" id = "normalOn">Normal ON</button>
+      <button type ="button" id = "normalOff">Normal OFF</button>
+    </p>
+    
+
+    <p>
+      <button type ="button" id ="lightOn">Light ON</button>
+      <button type ="button" id ="lightOff">Light OFF</button>
+    </p>
+    <button type ="button" id = "lightMoveButton">Stop Light Movement</button>
+    <p>
+      Light X <input type="range" min="-1000" max="1000", value="0" class="slider" id="lightSlideX">
+      Light Y <input type="range" min="-1000" max="1000", value="100" class="slider" id="lightSlideY">
+      Light Z <input type="range" min="-1000" max="1000", value="-200" class="slider" id="lightSlideZ">
+    </p>
+
+      <p>
+      Specular <input type="range" min="0" max="100", value="32" class="slider" id="specularSlide">
+      Ambient <input type="range" min="-10" max="25", value="5" class="slider" id="diffuseSlide">
+      Diffuse <input type="range" min="0" max="50", value="10" class="slider" id="ambientSlide">
+    </p>
+
+    <p>
+      Global Color <input type='color' id="totalColor" value="#ffffff">
+    </p>
+    
+    <p>
+      Camera FOV <input type="range" min="60" max="120" value="90" class="slider" id="FOVSlide">
+    </p>
+    <p>
+      World Turn <input type="range" min="-180" max="180" value="0" class="slider" id="angleSlide">
+    </p>
+
+    <button type ="button" id = "houseButton">Generate Shelter</button>
+    
+
+    <p>
+      Block
+      <select class="block" name="block" required>
+      <option value="">--Select an option--</option>
+      <option value="grassBlock">Grass</option>
+      <option value="dirtBlock" selected>Dirt</option>
+      <option value="woodLogBlock">Wood Log</option>
+      <option value="woodPlankBlock">Wood Plank</option>
+      <option value="cobbleBlock">Cobblestone</option>
+      <option value="brickBlock">Brick</option>
+      </select>
+    </p>
+
+    </div>
+    </div>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix-cse160.js"></script>
+    <script src="../lib/Point.js"></script>
+    <script src="../lib/Triangle.js"></script>
+    <script src="../lib/Circle.js"></script>
+    <script src="../lib/Cube.js"></script>
+    <script src="../lib/Sphere.js"></script>
+    <script src="../lib/Model.js"></script>
+    <script src="../lib/Camera.js"></script>
+    <script src="../lib/textureHandler.js"></script>
+    <script src="../lib/savedMap.js"></script>
+    <script src="asg3.js"></script>
+  </body>
+</html>

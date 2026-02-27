@@ -1,0 +1,38 @@
+.underline-text {
+    text-decoration: underline;
+}
+
+.center-text{
+  text-align: center;
+}
+
+#asgn {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  margin: 0 auto; 
+}
+
+#ui {
+  width: 200px;
+  padding: 12px;
+  background: #1d1d1d;
+}
+
+p{ 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+}
+
+body { background-color: #1d1e38; color: #ffffff; }
+
+.mySlider {
+  width: 75px;  
+  height: 5px;  
+}
+
+.myInput {
+  width: 100px;  
+  height: 10px;  
+}
