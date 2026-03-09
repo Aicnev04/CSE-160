@@ -1,0 +1,9 @@
+I've attempted to create a concert hall in space, using a piano model from cgtrader and chair model free3d. The walls and floor are textured cubes that are scaled to fit the generally architecture of a concert hall. Because it's in space (evident by the stars in the skybox) the Earth is rotating around the concert hall, illuminated by a spotlight. The piano and stage are illuminated by three spotlights and the sides of the wall are illuminated by point lights, mimicing something like a concert hall. There is a toggle switch to include ambient lighting. 
+
+It's nothing crazy or interesting as my main goal was to create an audio visualizer that can be play a piano piece, KZSC, a mp3/wav file of your choosing. Clicking the Piano button will play Liebestraum No3, the KZSC button will play the live feed of KZSC, and Load File will prompt the user to insert a mp3 or wav file.
+
+By playing the music, it will not be visualized until you toggle 'waveform' which will show the audio waveform. The 'visualize' button will then scatter the waveform in random location, creating interesting visuals. If you waveform is not enabled you won't see anything from the audio. If waveform is enabled and visualize is enabled the bars will move randomly. Finally if waveform is enabled but visualize is disabled, the bars will stay in place and change according to the music.
+
+The color and size of the bars being visualized are determined by the audio data via the byte frequency data.
+
+There is also an opacity bar to remove the concert hall. As far as I'm aware every on the rubric is covered in this assignment submission.

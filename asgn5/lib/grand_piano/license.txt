@@ -1,0 +1,11 @@
+Model Information:
+* title:	Grand Piano
+* source:	https://sketchfab.com/3d-models/grand-piano-1df8f22221ac496e92466db2a88014f6
+* author:	Michael Frost (https://sketchfab.com/michael_frost)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Grand Piano" (https://sketchfab.com/3d-models/grand-piano-1df8f22221ac496e92466db2a88014f6) by Michael Frost (https://sketchfab.com/michael_frost) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
